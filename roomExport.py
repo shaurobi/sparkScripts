@@ -1,8 +1,8 @@
 # imports list of users in room, imports into array, then dumps into team. At this stage, team will be predefined
 import json
 import requests
-#define authentication key
-key = "Bearer MGE4NTYzYTMtZmYzNi00Mzk4LTkyMGEtODgzZmNhYmVhYjJkZGRlYzI4NjctYjI3"
+#define authentication key -- add your own!
+key = ""
 
 
 #This section -- get list of users in room
