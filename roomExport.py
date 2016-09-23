@@ -2,15 +2,16 @@
 import json
 import requests
 #define authentication key -- add your own!
-key = ""
-
+key = "Bearer MGE4NTYzYTMtZmYzNi00Mzk4LTkyMGEtODgzZmNhYmVhYjJkZGRlYzI4NjctYjI3"
+startRoom = "Y2lzY29zcGFyazovL3VzL1JPT00vYjYxYWI5NDAtODA4MS0xMWU2LTljZmEtNmY1ZDc5MTRlZjUz"
+endTeam = "Y2lzY29zcGFyazovL3VzL1RFQU0vMGY2ZGU4OTAtODBhMS0xMWU2LWFiNjAtMTEyMTljNzY4ZDc5"
 
 #This section -- get list of users in room
 
 #define URL we're trying to hit
 url = "https://api.ciscospark.com/v1/memberships"
 #build the query, specifying the room you want to hit
-querystring = {"roomId":"Y2lzY29zcGFyazovL3VzL1JPT00vNjNkZTE0MDAtODBhMC0xMWU2LTkzYjMtOTVhMjYxMjNlYTkx"}
+querystring = {"roomId": startRoom}
 #don't forget the headers, and use that authorisation we used earlier, american spelling tho
 headers = {
     'authorization': key,
@@ -41,7 +42,7 @@ headers = {
 #now we've built the headers, lets loop through the emails in the list
 for people in list:
 	data = {#building the payload here, next line specifies the team youre migrating to
-		'teamId':   'Y2lzY29zcGFyazovL3VzL1RFQU0vMGY2ZGU4OTAtODBhMS0xMWU2LWFiNjAtMTEyMTljNzY4ZDc5',
+		'teamId':   endTeam,
 	   	'personEmail': people #build the email into the payload
 	   	}
 	payload = json.dumps(data) #build the payload into JSON
