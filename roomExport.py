@@ -3,8 +3,8 @@ import json
 import requests
 #define authentication key -- add your own!
 key = "" 
-startRoom = "Y2lzY29zcGFyazovL3VzL1JPT00vYjYxYWI5NDAtODA4MS0xMWU2LTljZmEtNmY1ZDc5MTRlZjUz"
-endTeam = "Y2lzY29zcGFyazovL3VzL1RFQU0vMGY2ZGU4OTAtODBhMS0xMWU2LWFiNjAtMTEyMTljNzY4ZDc5"
+startRoom = ""
+endTeam = ""
 
 #This section -- get list of users in room
 
